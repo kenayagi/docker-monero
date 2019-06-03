@@ -13,6 +13,8 @@ RUN echo "${MONERO_SHA256SUM}  /opt/monero-linux-x64-${MONERO_VERSION}.tar.bz2" 
 RUN tar -C /opt -xf /opt/monero-linux-x64-${MONERO_VERSION}.tar.bz2
 RUN cd /opt && ln -s /opt/monero-${MONERO_VERSION}/ monero
 
+EXPOSE 18080 18081
+
 VOLUME /root/.bitmonero
 
 CMD /opt/monero/monerod --p2p-bind-ip=0.0.0.0 --p2p-bind-port=18080 --rpc-bind-ip=0.0.0.0 --rpc-bind-port=18081 --non-interactive --confirm-external-bind
