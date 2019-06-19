@@ -6,8 +6,8 @@ RUN apt update && apt -y upgrade && apt -y install \
 ARG UPLOAD_KBPS=1024
 ARG DOWNLOAD_KBPS=8192
 
-ARG MONERO_VERSION=v0.14.0.2
-ARG MONERO_SHA256SUM=4dd5cd9976eda6b33b16821e79e671527b78a1c9bfb3d973efe84b824642dd21
+ARG MONERO_VERSION=v0.14.1.0
+ARG MONERO_SHA256SUM=2b95118f53d98d542a85f8732b84ba13b3cd20517ccb40332b0edd0ddf4f8c62
 
 ADD https://downloads.getmonero.org/cli/monero-linux-x64-${MONERO_VERSION}.tar.bz2 /opt/
 
