@@ -14,7 +14,7 @@ ADD https://downloads.getmonero.org/cli/monero-linux-x64-${MONERO_VERSION}.tar.b
 RUN echo "${MONERO_SHA256SUM}  /opt/monero-linux-x64-${MONERO_VERSION}.tar.bz2" | sha256sum -c
 
 RUN tar -C /opt -xf /opt/monero-linux-x64-${MONERO_VERSION}.tar.bz2
-RUN cd /opt && ln -s /opt/monero-${MONERO_VERSION}/ monero
+RUN cd /opt && ln -s /opt/monero-x86_64-linux-gnu/ monero
 
 EXPOSE 18080 18081
 
